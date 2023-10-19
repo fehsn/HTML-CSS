@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(188, 188, 220);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
