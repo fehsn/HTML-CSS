@@ -6,28 +6,53 @@
     margin: 0px;
     padding: 0px;
 }
-:root{
-    --fontepoema:  'Sriracha', 'cursive';
-    --fontegrande: 'Sriracha', 'cursive';
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgrey;
 }
 
 header{
     background-color: black;
-    height: 220px;
     color: white;
-    font-family: var(--fontegrande);
-    font-size: 2em;
     text-align: center;
 }
-
-header p{
-    font-size: 0.5em;
+header>h1{
+    padding-top: 50px;
+    font-variant: small-caps;
 }
-main{
-
+header>p{
+    padding-bottom: 50px;
 }
-section#primeirop{
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+section.normal{
     background-color: white;
     color: black;
-    max-width: 700px;
+}
+section.imagem{
+    background-color: rgb(58, 52, 52);
+    color: white;
+}
+section.imagem>p{
+    background-color: rgba(0, 0, 0, 0.258);
+    width: 400px;
+}
+footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
