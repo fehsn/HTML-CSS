@@ -8,11 +8,10 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-        table{
+        table,td,th{
             padding: 10px;
-            border: 2px solid black;
-            border-radius: 10px;
-            border-collapse: ;
+            border: 3px solid black;
+            border-collapse: collapse;
         }
         th{
             background-color: lightslategray;
@@ -22,23 +21,29 @@
         th.esq{
             text-align: left;
         }
+        tr.l1{
+            background-color: lightslategray;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplinas</th>
-                <th>Notas</th>
-                <th rowspan="2">Média</th>
+                <th rowspan="2" scope="rowgroup">Área</th>
+                <th rowspan="2" scope="rowgroup">Disciplinas</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2" scope="rowgroup">Média</th>
             </tr>
-            <tr>Nota 1</tr>
-            <tr>Nota 2</tr>
+            <tr>
+                <td>Nota 1</td>
+                <td>Nota 2</td>
+            </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="4">Exatas</th>
+                <th rowspan="4" scope="rowgroup"><strong>Exatas</strong></th>
                 <td>Matemática</td>
                 <td>10.0</td>
                 <td>10.0</td>
@@ -62,12 +67,12 @@
                 <td>10.0</td>
                 <td>10.0</td>
             </tr>
-            <tr>
-                <th colspan="4" class="esq">Média de Exatas</th>
+            <tr class="l1">
+                <th colspan="4" class="esq" scope="colgroup">Média de Exatas</th>
                 <td>10.0</td>
             </tr>
             <tr>
-                <th rowspan="2" class="txtstrong">Humanas</th>
+                <th rowspan="2" scope="rowgroup"><strong>Humanas</strong></th>
                 <td>História</td>
                 <td>10.0</td>
                 <td>10.0</td>
@@ -80,9 +85,9 @@
                 <td>10.0</td>
             </tr>
             <tfoot>
-               <tr>
-                <th colspan="4" class="esq">Média de Humanas</th>
-                <tr>10.0</tr>
+               <tr class="l1">
+                <th colspan="4" class="esq" scope="colgroup">Média de Humanas</th>
+                <td>10.0</td>
                </tr>
             </tfoot>
         </tbody>
